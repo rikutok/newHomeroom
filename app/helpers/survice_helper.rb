@@ -1,0 +1,2 @@
+module SurviceHelper
+end

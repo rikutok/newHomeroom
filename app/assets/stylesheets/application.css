@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+div.button ul li a{
+    display: inline-block;
+    font-size:140%;
+    text-decoration: none;
+    color: #FFF;
+    width: 220px;
+    height: 220px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);    
+    background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+    transition: .4s;
+    padding:50px 15px;
+}
+
+div.button ul li a:hover {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+div.button {
+    width:800px;
+    height:100%;
+    display:block;
+    margin:0 auto;
+}
+div.button ul{
+    display:inline-block;
+}
+div.button ul li{
+    float:left;
+    text-align:center;
+    margin:10px;
+    list-style:none;
+}
+
+div.container{
+    clear:both;
+}
+
+#sub_title{
+    width: 60%;
+    display: block;
+    margin: auto;
+}

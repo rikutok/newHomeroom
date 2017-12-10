@@ -1,0 +1,48 @@
+<h1 class = "page-header">出張サービス</h1>
+<div class="jumbotron">
+    <div class="page-header"><h1>出張サービスについて</h1></div>
+    <p>
+    <br><br>理解を更に深めたい場合は私達が出動します(*ﾟ▽ﾟ*)
+    <br><br>その場その問題に臨機応変に対応します。
+    <br><br>
+    <br><br>質問などはこちらに<a href = "mailto:ninja8rrrr@gmail.com">〇〇〇〇@gmail.com</a>
+    </p>
+</div>
+<div class="container">
+    <br>
+    <form action="/homerooms/new_lesson" method="post">
+        <div class="controls">
+            <div class="form-group">
+                <h2>氏名を入力してください。</h2>
+                <input type="text" name="name" placeholder="氏名" class="form-control input-lg" required><br>
+                <h2>組を選択してください。</h2>
+                <select name="list" class="form-control" required>
+                        <option value="1">1組</option>
+                        <option value="2">2組</option>
+                        <option value="3">3組</option>
+                        <option value="4">4組</option>
+                        <option value="5">5組</option>
+                        <option value="6">6組</option>
+                        <option value="7">7組</option>
+                </select><br>
+                <h2>メールアドレスを入力してください。</h2>
+                <input type="email" name="mail" placeholder="例：taro@kmail.com" class="form-control input-lg" required><br>
+                <h2>希望する場所を入力してください。</h2>
+                <textarea name="comment" placeholder="例：図書館,または東京都町田市金森１１６１のように" class="form-control input-lg" required></textarea><br>
+                <h2>希望日時を選択してください。</h2>
+                <input type="date" name="date" class="form-control input-lg" required><br>
+                <h2>大まかな質問内容を入力してください。</h2>
+                <textarea name="comment" placeholder="例：数学" class="form-control input-lg" required></textarea><br>
+                <h2>指導体制を選択してください。</h2>
+                <select name="list_teacher" class="form-control" required>
+                        <option value="なんでも">なんでも</option>
+                        <option value="男性">男性</option>
+                        <option value="女性">女性</option>
+                </select><br>
+            </div>
+            <div class="form-group col-lg-4">
+                <input type="submit" value="申し込む" class="form-control col-lg-4">
+            </div>
+        </div>
+    </form>
+</div>

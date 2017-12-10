@@ -1,0 +1,39 @@
+<form action="stalk/get_result" method="post" name = "display_result">
+    <input type="hidden" id = "result1" name = 'results1'>
+    <input type="hidden" id = "result2" name = 'results2'>
+</form>
+<script type = "text/javascript">
+if( navigator.geolocation )
+{
+	// 現在地を取得
+	navigator.geolocation.getCurrentPosition(
+
+		// [第1引数] 取得に成功した場合の関数
+		function( position )
+		{
+			// 取得したデータの整理
+			var data = position.coords ;
+
+			// データの整理
+			var lat = data.latitude ;
+			var lng = data.longitude ;
+			var alt = data.altitude ;
+			var accLatlng = data.accuracy ;
+			var accAlt = data.altitudeAccuracy ;
+			var heading = data.heading ;			//0=北,90=東,180=南,270=西
+			var speed = data.speed ;
+
+			// アラート表示
+//			alert( "あなたの現在位置は、\n[" + lat + "," + lng + "]\nです。" ) ;
+
+			// HTMLへの書き出し
+			document.getElementById( 'result1' ).value = lat;
+            document.getElementById( 'result2' ).value = lng;
+            document.display_result.submit();
+            
+
+		}
+	)
+}
+
+</script>

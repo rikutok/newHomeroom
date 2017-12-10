@@ -1,0 +1,66 @@
+<% if @admin == "on" %>
+    <h1>This is admin page.</h1>
+<div class="col-lg-11" id="list-group2">
+            <table  class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>番号</th>
+                        <th>名前</th>
+                        <th>クラス</th>
+                        <th>メールアドレス</th>
+                        <th>希望日時</th>
+                        <th>コメント</th>
+                        <th>生徒か教師か</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @homeroom.each do |questions| %>
+                        <tr>
+                            <td><%= questions.id %></td>
+                            <td><%= questions.name %></td>
+                            <td><%= questions.set %></td>
+                            <td><%= questions.mail %></td>
+                            <td><%= questions.dating %></td>
+                            <td><%= questions.comments %></td>
+                            <% if questions.student == "true" %>
+                                <td>生徒</td>
+                            <% else %>
+                                <td>教師希望</td>
+                            <% end %>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+</div>
+<% elsif @admin == "off" %>
+    <form action="/admins/index" method="post" style = "text-align:center;">
+        <input type = "password" name = "pass" class="form-control input-lg" placeholder="パスワードを入力">
+    </form>
+<% elsif @admin == "off_wait" %>
+<div class="col-lg-11" id="list-group2">
+            <table  class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>番号</th>
+                        <th>名前</th>
+                        <th>クラス</th>
+                        <th>メールアドレス</th>
+                        <th>希望日時</th>
+                        <th>コメント</th>
+                        <th>生徒か教師か</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>田中龍之介</td>
+                            <td>6</td>
+                            <td>@gmail.com</td>
+                            <td>2017/12/6</td>
+                            <td>test</td>
+                            <td>生徒</td>
+                        </tr>
+                </tbody>
+            </table>
+</div>
+<% end %>

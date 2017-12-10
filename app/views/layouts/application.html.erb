@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>N.H.R.</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!-- Optional theme --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> <!-- Latest compiled and minified JavaScript --> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<nav class="navbar navbar-inverse">
+	    <div class="container">
+	        <div class="navbar-header" style = "height:110px;">
+	            <a href="/homerooms" class="navbar-brand">	<%= image_tag("title.png",height: "210%",margin: "auto")%> -New Home Room-</a>
+	        </div>
+	        <ul class="nav navbar-nav navbar-right" style = "top:50px;font-size:120%;">
+	        		<li><a href="/homerooms/new">新規授業申し込み</a></li>
+	            <li><a href="/intros">このサイトについて</a></li>
+	            <!--<li><a href="/survice">出張サービス</a></li>-->
+	            <!--<li><a href="/new_teacher">教師になりませんか？</a></li>-->
+	            <li><a href="#"><s>Coming Soon</s></a></li>
+	        </ul>
+	    </div>
+	</nav>
+<%= yield %>
+</body>
+</html>
