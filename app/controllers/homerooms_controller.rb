@@ -6,17 +6,20 @@ class HomeroomsController < ApplicationController
   # GET /homerooms
   # GET /homerooms.json
   def index
-    @homeroom = Homeroom.all
+    # @homeroom = Homeroom.all
   end
   
   def show
-    @homeroom = Homeroom.all
+    # @homeroom = Homeroom.all
   end
   
   def new_lesson
     @name = params['name']
     @sets = params['list']
     @mail_adress = params['mail']
+    if @name.empty?
+      @name = "匿名"
+    end
     # @comments = params['comment']
     # @date = params['date']
     # x = Homeroom.new(:name => @name, :set => @sets, :mail => @mail_adress, :student => "true", :dating => @date, :comments => @comments);

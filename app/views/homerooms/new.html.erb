@@ -5,7 +5,8 @@
         <div class="controls">
             <div class="form-group">
                 <h2>氏名を入力してください。</h2>
-                <input type="text" name="name" placeholder="氏名" class="form-control input-lg" required><br>
+                <p>※匿名も可（空白のまま申し込みください。）</p>
+                <input type="text" name="name" placeholder="氏名" class="form-control input-lg" ><br>
                 <h2>組を選択してください。</h2>
                 <select name="list" class="form-control" required>
                         <option value="1">1組</option>
@@ -26,8 +27,13 @@
                 <!--<textarea name="comment" placeholder="例：二次方程式がわからない" class="form-control input-lg" required></textarea><br>-->
             </div>
             <div class="form-group col-lg-4">
-                <input type="submit" value="申し込む" class="form-control col-lg-4">
+                <input type="submit" value="申し込む" class="form-control col-lg-4" onclick = "before_sending()">
             </div>
         </div>
     </form>
 </div>
+<script>
+    function before_sending(){
+        alert("メールを送信しました。登録したメールアドレスの受信箱を確認してください。");
+    }
+</script>
