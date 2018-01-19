@@ -5,7 +5,8 @@ class TestMailer < ApplicationMailer
   #
   #   en.test_mailer.sender.subject
   #
-  def sender(address, name, set_class)
+  
+def sender(address, name, set_class)
     @address = address
     @user_name = name
     @classes = set_class
